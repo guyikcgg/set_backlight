@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd ~/.set_backlight
+mplayer -vo png -frames 1 tv://
+brillo=$(octave --silent --eval "measure_light")
+#brillo=$(echo $brillo | grep -o '[0-9][0-9]\.[0-9]')
+echo "Setting backlight to" $brillo
+#xbacklight = $brillo
+echo -n $brillo | sudo tee /sys/class/backlight/intel_backlight/brightness
+echo "marcador4"
+rm *.png

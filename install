@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo "This script allows auto set backlight at boot and return from sleep"
+echo ""
+echo "Give super-user access to install octave and mplayer"
+echo ""
+sudo apt-get install octave mplayer
+echo ""
+
+echo "Copying the scripts to home directory..."
+if [ ! -d ~/.set_backlight ]; then
+	mkdir ~/.set_backlight
+fi
+cp -r files/simple_script ~/.set_backlight/
+cp -r files/measure_light.m ~/.set_backlight/
+sudo chmod +x simple_script
+
+echo "Copying the scripts to pm-utils..."
+#sudo cp to_home/00_set_backlight_from_photo /usr/lib/pm-utils/sleep.d/
+sudo cp files/99_set_backlight_from_photo /usr/lib/pm-utils/power.d/
+sudo chmod +x /usr/lib/pm-utils/power.d/99_set_backlight_from_photo 
+
+echo "Done."

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Al despertar:
+case "$1" in
+        true|false)
+                cd /home/cristian12/.set_backlight/
+                ./simple_script
+                ;;
+esac
