@@ -1,12 +1,12 @@
 # set_backlight
-Set backlight automatically on boot and wakeup (simple script for linux)
+Script for GNU/Linux which adjust the screen brightness according to the light in the room. It runs on every boot and every wakeup from sleep, giving a fairly good initial brightness.
 
 
 General description
 -------------------
-A script is copied to the user home folder, under ``.set_backlight`` folder. This script will be run when ``mp-utils`` power management tool triggers.
+The script is copied to the user home folder, under ``.set_backlight`` folder. This script will be run when ``mp-utils`` power management tool triggers.
 
-The script takes a photo using ``mplayer`` and then calculates the average brightness using ``octave``.
+This script takes a photo using ``mplayer`` and then calculates the average brightness from it using ``octave``.
 
 Dependencies
 ------------
