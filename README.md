@@ -10,12 +10,12 @@ The script takes a photo using ``mplayer`` and then calculates the average brigh
 
 Dependencies
 ------------
-*mp-utils
-*mplayer
-*octave
-*sudo
-*apt-get
-*sh
+* mp-utils
+* mplayer
+* octave
+* sudo
+* apt-get
+* sh
 
 Installation
 ------------
@@ -24,4 +24,4 @@ Just execute ``./install``, this will install the dependencies (using ``apt-get`
 Tested systems
 --------------
 
-*Ubuntu 14.04
+* Ubuntu 14.04
